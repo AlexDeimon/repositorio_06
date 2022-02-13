@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Mundo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link  rel="icon" href="https://alexdeimon.github.io/Apuntes/assets/favicon/favicon.ico" type="image/png" />
+</head>
+<body onload="startTime()">
+    <header class="div2">
+        <h1>Hola mundo &lt;/&gt;</h1>
+        <div id="clock">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+    </header>
+    <main>
+        <img src="https://alexdeimon.github.io/Apuntes/assets/images/portada.jpg" alt="">
+        <div class="div1">
+            <input type="file" id="file" accept="image/*" onchange="mostrar()"/>
+            <button onclick="ver()">Generar</button>    
+        </div>
+        <img id="img"/>   
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Input</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>button</td>
+                    <td><input type="button" value="input button"></td>
+                </tr>
+                <tr>
+                    <td>submit</td>
+                    <td><input type="submit"></td>
+                </tr>
+                <tr>
+                    <td>date:</td>
+                    <td><input type="date"></td>
+                </tr>
+                <tr>
+                    <td>time</td>
+                    <td><input type="time"></td>
+                </tr>
+                <tr>
+                    <td>datetime-local</td>
+                    <td><input type="datetime-local"></td>
+                </tr>
+                <tr>
+                    <td>month</td>
+                    <td><input type="month"></td>
+                </tr>
+                <tr>
+                    <td>week</td>
+                    <td><input type="week"></td>
+                </tr>
+                <tr>
+                    <td>search</td>
+                    <td><input type="search"></td>
+                </tr>
+                <tr>
+                    <td>tel</td>
+                    <td><input type="tel"></td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td><input type="url"></td>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td><input type="color"></td>
+                </tr>
+                <tr>
+                    <td>number</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>range</td>
+                    <td><input type="range" step="10" min="0" max="100"></td>
+                </tr>
+                <tr>
+                    <td>reset</td>
+                    <td><input type="reset"></td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>radio</td>
+                    <td>
+                        <label><input type="radio" name="developer" value="Backend">Backend </label>
+                        <label><input type="radio" name="developer" value="Frontend" checked="">Frontend </label>
+                        <label><input type="radio" name="developer" value="FullStack">FullStack </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>checkbox</td>
+                    <td>
+                        <label><input type="checkbox" name="languages" value="html" checked="">HTML </label>
+                        <label><input type="checkbox" name="languages" value="css" checked="">CSS </label>
+                        <label><input type="checkbox" name="languages" value="javascript">JavaScript </label>
+                    </td>
+                </tr>
+            </tbody>
+        </table> 
+        <div class="div2">
+            <button>Crear</button>  
+            <button>Consultar</button>  
+            <button>Modificar</button>  
+            <button>Borrar</button> 
+        </div>
+    </main>
+    <script src="holamundo.js"></script>
+</body>
+</html>
