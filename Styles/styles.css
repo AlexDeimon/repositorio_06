@@ -1,0 +1,99 @@
+body{
+    background-color: #1d232f;
+    font-family: 'Oswald', sans-serif;
+}
+
+main{
+    display: grid;
+}
+
+p, 
+.lista{
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 0% 3% 1%;
+}
+
+.header{
+    background-color: black;
+}
+
+.titulo1,
+.titulo2{
+    display: inline-block;
+}
+
+.titulo2{
+    font-size: xx-large;
+}
+
+.resaltado{
+    color: #00b5fd;
+}
+
+.titulos{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.boton{
+    display: block;
+    width: 9ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.hidden{
+    display: none;
+}
+
+.titulo1, 
+.lista1{
+    color: white;
+}
+
+.ejercicio1{
+    background-color: #00112c;
+}
+
+.boton1{
+    color: #00112c;
+    background-color: #0abf53;
+    border: 10px solid #00112c;
+}
+
+.ejercicio2{
+    background-color: #eeeeee;
+}
+
+.boton2{
+    color: #eeeeee;
+    background-color: #008fd4;
+    border: 10px solid #eeeeee;
+}
+
+.lista li{
+    line-height: 1.5;
+}
+
+.ejercicio1 h2{
+    color: #0abf53;
+}
+
+.ejercicio2 h2{
+    color: #008fd4;
+}
+
+.lista li::marker{
+    font-weight: bold;
+}
+
+.lista1 li::marker{
+    color: #0abf53;
+}
+
+.lista2 li::marker{
+    color: #008fd4;
+}

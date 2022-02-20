@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación Datos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link  rel="icon" href="https://alexdeimon.github.io/Apuntes/assets/favicon/favicon.ico" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Hoja de vida</h1>
+    <form id="form">
+        <div class="divForm">
+            <fieldset>
+                    <legend>Datos personales</legend>
+                    <div>
+                        <label for="nombre">Nombres:</label>
+                        <input autocomplete="off" type="text" id="nombre" name="nombre">
+                        <p class="error" id="errorNombre"></p>
+                        <label for="apellidos">Apellidos:</label>
+                        <input autocomplete="off" type="text" id="apellidos" name="apellidos">
+                        <p class="error" id="errorApellido"></p>
+                        <label for="nacimiento">Fecha Nacimiento:</label>
+                        <input autocomplete="off" type="date" id="nacimiento" name="nacimiento">
+                        <p class="error" id="errorNacimiento"></p>
+                        <label for="pais">Pais de recidencia:</label>
+                        <input autocomplete="off" type="text" id="pais" name="pais">
+                        <p class="error" id="errorPais"></p>
+                        <label for="telefono">Teléfono:</label>
+                        <input autocomplete="off" type="tel" id="telefono" name="telefono">
+                        <p class="error" id="errorTelefono"></p>
+                        <label for="correo">Correo electrónico:</label>
+                        <input autocomplete="off" type="email" id="correo" name="correo">
+                        <p class="error" id="errorCorreo"></p>
+                        <label for="foto">Tu foto:</label>
+                        <input type="file"  accept="image/*" id="foto" name="foto">    
+                        <p class="error" id="errorFoto"></p>
+                    </div>
+            </fieldset>
+            <fieldset>
+                <legend>Datos profesionales</legend>
+                <div>
+                    <label for="empresa">Empresa anterior:</label>
+                    <input autocomplete="off" type="text" id="empresa" name="empresa">
+                    <p class="error" id="errorEmpresa"></p>
+                    <label for="jefe">Nombre Jefe anterior:</label>
+                    <input autocomplete="off" type="text" id="jefe" name="jefe">
+                    <p class="error" id="errorJefe"></p>
+                    <label for="telefonoJefe">Teléfono Jefe anterior:</label>
+                    <input autocomplete="off" type="tel" id="telefonoJefe" name="telefonoJefe">
+                    <p class="error" id="errorTelefonoJefe"></p>
+                    <label for="fechaInicio">Fecha Ingreso:</label>
+                    <input autocomplete="off" type="date" id="fechaInicio" name="fechaInicio">
+                    <label for="fechaSalida">Fecha Salida:</label>
+                    <input autocomplete="off" type="date" id="fechaSalida" name="fechaSalida"> 
+                    <p class="error" id="errorFechas"></p>   
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Educación</legend>
+                <div>
+                    <label for="formacionAcademica">Formación académica:</label>
+                    <select name="formacionAcademica" id="formacionAcademica">
+                        <option value="Bachillerato">Bachillerato</option>
+                        <option value="Titulo Pregrado">Titulo Pregrado</option>
+                        <option value="Titulo Postgrado">Titulo Postgrado</option>
+                    </select>
+                    <label for="certificado">Formación complementaria (certificado):</label>
+                    <input type="file" id="certificado">
+                    <p class="error" id="errorCertificado"></p>
+                    <label for="idiomas">Idiomas:</label>
+                    <select name="idiomas" id="idiomas">
+                        <optgroup label="Ingles">
+                            <option value="inglesA1">A1</option>
+                            <option value="inglesA2">A2</option>
+                            <option value="inglesB1">B1</option>
+                            <option value="inglesB2">B2</option>
+                            <option value="inglesC">C</option>
+                        </optgroup>
+                        <option value="frances">Frances</option>
+                        <option value="portugues">Portugues</option>
+                        <option value="italiano">Italiano</option>
+                        <option value="otro">Otro</option>
+                    </select>    
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Referencias</legend>
+                <div>
+                    <label for="nombre1">Nombre Referencia 1:</label>
+                    <input autocomplete="off" type="text" id="nombre1" name="nombre1">
+                    <p class="error" id="errorNombre1"></p>
+                    <label for="telefono1">Teléfono:</label>
+                    <input autocomplete="off" type="tel" id="telefono1" name="telefono1">
+                    <p class="error" id="errorTelefono1"></p>
+                    <label for="correo1">Correo electrónico:</label>
+                    <input autocomplete="off" type="email" id="correo1" name="correo1"> 
+                    <p class="error" id="errorCorreo1"></p>   
+                    <label for="nombre2">Nombre Referencia 2:</label>
+                    <input autocomplete="off" type="text" id="nombre2" name="nombre2">
+                    <p class="error" id="errorNombre2"></p>
+                    <label for="telefono2">Teléfono:</label>
+                    <input autocomplete="off" type="tel" id="telefono2" name="telefono2">
+                    <p class="error" id="errorTelefono2"></p>
+                    <label for="correo2">Correo electrónico:</label>
+                    <input autocomplete="off" type="email" id="correo2" name="correo2">
+                    <p class="error" id="errorCorreo2"></p> 
+                    <label for="nombre3">Nombre Referencia 3:</label>
+                    <input autocomplete="off" type="text" id="nombre3" name="nombre3">
+                    <p class="error" id="errorNombre3"></p>
+                    <label for="telefono3">Teléfono:</label>
+                    <input autocomplete="off" type="tel" id="telefono3" name="telefono3">
+                    <p class="error" id="errorTelefono3"></p>
+                    <label for="correo3">Correo electrónico:</label>
+                    <input autocomplete="off" type="email" id="correo3" name="correo3">   
+                    <p class="error" id="errorCorreo3"></p>  
+                </div>
+            </fieldset>    
+        </div>
+    </form>
+    <button id="validar">Validar Datos</button>
+    <script src="ValidacionDatos.js"></script>
+</body>
+</html>
