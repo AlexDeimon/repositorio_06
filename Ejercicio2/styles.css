@@ -10,8 +10,7 @@ h1{
 
 fieldset{
     display: inline-block;
-    margin-left: 3%;
-    margin-right: 3%;
+    position: relative;
     background-color: #cccccc;
     font-size: large;
     box-shadow: 5px 5px 10px 2px #696969;
@@ -46,6 +45,8 @@ button{
 
 p{
     color: red;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 @media all and (max-width:340px){
@@ -83,20 +84,42 @@ fieldset div p{
 .divForm{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     row-gap: 10px;
 }
 
-.error{
+.hidden{
     display: none;
 }
 
-.inputMal{
-    box-shadow: 0px 0px 5px 5px #ff6767;
+.add{
+    box-sizing: border-box;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: -15px;
+    right: -25px;
+    padding: 1px 15px;
+    color: #001f2d;
+    font-size: x-large;
+    background-color: #008fd4;
+    border: 1px solid #001f2d;
+    border-radius: 50%;
+    text-decoration: none;
 }
 
-#validar:hover{
+.item{
+    display: inline-block;
+    margin: 10px;
+    padding: 0px 5px;
+    background-color: #008fd4;
+    color: #001f2d;
+    border-radius: 10px;
+}
+
+#validar:hover,
+#submit:hover{
     cursor: pointer;
     color: white;
 }

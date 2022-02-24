@@ -16,49 +16,51 @@
     <form id="form">
         <div class="divForm">
             <fieldset>
-                    <legend>Datos personales</legend>
-                    <div>
-                        <label for="nombre">Nombres:</label>
-                        <input autocomplete="off" type="text" id="nombre" name="nombre">
-                        <p class="error" id="errorNombre"></p>
-                        <label for="apellidos">Apellidos:</label>
-                        <input autocomplete="off" type="text" id="apellidos" name="apellidos">
-                        <p class="error" id="errorApellido"></p>
-                        <label for="nacimiento">Fecha Nacimiento:</label>
-                        <input autocomplete="off" type="date" id="nacimiento" name="nacimiento">
-                        <p class="error" id="errorNacimiento"></p>
-                        <label for="pais">Pais de recidencia:</label>
-                        <input autocomplete="off" type="text" id="pais" name="pais">
-                        <p class="error" id="errorPais"></p>
-                        <label for="telefono">Teléfono:</label>
-                        <input autocomplete="off" type="tel" id="telefono" name="telefono">
-                        <p class="error" id="errorTelefono"></p>
-                        <label for="correo">Correo electrónico:</label>
-                        <input autocomplete="off" type="email" id="correo" name="correo">
-                        <p class="error" id="errorCorreo"></p>
-                        <label for="foto">Tu foto:</label>
-                        <input type="file"  accept="image/*" id="foto" name="foto">    
-                        <p class="error" id="errorFoto"></p>
-                    </div>
+                <legend>Datos personales</legend>
+                <div>
+                    <label for="nombre">Nombres:</label>
+                    <input autocomplete="off" type="text" id="nombre" name="nombre">
+                    <p class="hidden" id="errorNombre">El nombre deber tener entre 5 y 30 caracteres Alfabéticos</p>
+                    <label for="apellidos">Apellidos:</label>
+                    <input autocomplete="off" type="text" id="apellidos" name="apellidos">
+                    <p class="hidden" id="errorApellido">Los apellidos deber tener entre 5 y 30 caracteres Alfabéticos</p>
+                    <label for="nacimiento">Fecha Nacimiento:</label>
+                    <input autocomplete="off" type="date" id="nacimiento" name="nacimiento">
+                    <p class="hidden" id="errorNacimiento"></p>
+                    <label for="pais">Pais de recidencia:</label>
+                    <input autocomplete="off" type="text" id="pais" name="pais">
+                    <p class="hidden" id="errorPais">El pais debe tener al menos 3 caracteres Alfabéticos</p>
+                    <label for="telefono">Teléfono:</label>
+                    <input autocomplete="off" type="tel" id="telefono" name="telefono">
+                    <p class="hidden" id="errorTelefono">El télefono debe tener entre 7 y 20 caracteres numérícos</p>
+                    <label for="correo">Correo electrónico:</label>
+                    <input autocomplete="off" type="email" id="correo" name="correo">
+                    <p class="hidden" id="errorCorreo">El Correo es invalido</p>
+                    <label for="foto">Tu foto:</label>
+                    <input type="file"  accept="image/*" id="foto" name="foto">    
+                    <p class="hidden" id="errorFoto">Debes subir un archivo de tipo imagen</p>
+                </div>
             </fieldset>
             <fieldset>
                 <legend>Datos profesionales</legend>
-                <div>
+                <div class="profesionales" id="profesionales">
                     <label for="empresa">Empresa anterior:</label>
                     <input autocomplete="off" type="text" id="empresa" name="empresa">
-                    <p class="error" id="errorEmpresa"></p>
+                    <p class="hidden" id="errorEmpresa">La empresa deber tener entre 3 y 30 caracteres</p>
                     <label for="jefe">Nombre Jefe anterior:</label>
                     <input autocomplete="off" type="text" id="jefe" name="jefe">
-                    <p class="error" id="errorJefe"></p>
+                    <p class="hidden" id="errorJefe">El nombre de tu jefe anterior deber tener entre 5 y 30 caracteres Alfabéticos</p>
                     <label for="telefonoJefe">Teléfono Jefe anterior:</label>
                     <input autocomplete="off" type="tel" id="telefonoJefe" name="telefonoJefe">
-                    <p class="error" id="errorTelefonoJefe"></p>
+                    <p class="hidden" id="errorTelefonoJefe">El télefono de tu jefe debe tener entre 7 y 20 caracteres numéricos</p>
                     <label for="fechaInicio">Fecha Ingreso:</label>
                     <input autocomplete="off" type="date" id="fechaInicio" name="fechaInicio">
                     <label for="fechaSalida">Fecha Salida:</label>
                     <input autocomplete="off" type="date" id="fechaSalida" name="fechaSalida"> 
-                    <p class="error" id="errorFechas"></p>   
+                    <p class="hidden" id="errorFechas"></p>   
                 </div>
+                <p class="hidden" id="errorProfesionales">No hay ninguna empresa agregada</p>
+                <a href="javascript:datosProfesionales()" class="add">+</a>
             </fieldset>
             <fieldset>
                 <legend>Educación</legend>
@@ -71,7 +73,7 @@
                     </select>
                     <label for="certificado">Formación complementaria (certificado):</label>
                     <input type="file" id="certificado">
-                    <p class="error" id="errorCertificado"></p>
+                    <p class="hidden" id="errorCertificado">Debes subir un archivo de tipo pdf</p>
                     <label for="idiomas">Idiomas:</label>
                     <select name="idiomas" id="idiomas">
                         <optgroup label="Ingles">
@@ -90,39 +92,28 @@
             </fieldset>
             <fieldset>
                 <legend>Referencias</legend>
-                <div>
+                <div class="referencias" id="referencias">
                     <label for="nombre1">Nombre Referencia 1:</label>
                     <input autocomplete="off" type="text" id="nombre1" name="nombre1">
-                    <p class="error" id="errorNombre1"></p>
+                    <p class="hidden" id="errorNombre1">El nombre deber tener entre 5 y 30 caracteres Alfabéticos</p>
                     <label for="telefono1">Teléfono:</label>
                     <input autocomplete="off" type="tel" id="telefono1" name="telefono1">
-                    <p class="error" id="errorTelefono1"></p>
+                    <p class="hidden" id="errorTelefono1">El télefono debe tener entre 7 y 20 caracteres numérícos</p>
                     <label for="correo1">Correo electrónico:</label>
                     <input autocomplete="off" type="email" id="correo1" name="correo1"> 
-                    <p class="error" id="errorCorreo1"></p>   
-                    <label for="nombre2">Nombre Referencia 2:</label>
-                    <input autocomplete="off" type="text" id="nombre2" name="nombre2">
-                    <p class="error" id="errorNombre2"></p>
-                    <label for="telefono2">Teléfono:</label>
-                    <input autocomplete="off" type="tel" id="telefono2" name="telefono2">
-                    <p class="error" id="errorTelefono2"></p>
-                    <label for="correo2">Correo electrónico:</label>
-                    <input autocomplete="off" type="email" id="correo2" name="correo2">
-                    <p class="error" id="errorCorreo2"></p> 
-                    <label for="nombre3">Nombre Referencia 3:</label>
-                    <input autocomplete="off" type="text" id="nombre3" name="nombre3">
-                    <p class="error" id="errorNombre3"></p>
-                    <label for="telefono3">Teléfono:</label>
-                    <input autocomplete="off" type="tel" id="telefono3" name="telefono3">
-                    <p class="error" id="errorTelefono3"></p>
-                    <label for="correo3">Correo electrónico:</label>
-                    <input autocomplete="off" type="email" id="correo3" name="correo3">   
-                    <p class="error" id="errorCorreo3"></p>  
+                    <p class="hidden" id="errorCorreo1">El Correo es invalido</p>   
                 </div>
+                <p class="hidden" id="errorReferencias">No hay ninguna referencia agregada</p>
+                <a href="javascript:datosReferencias()" class="add">+</a>
             </fieldset>    
         </div>
+        <button class="hidden" id="submit" type="submit">Subir</button>
     </form>
     <button id="validar">Validar Datos</button>
     <script src="ValidacionDatos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
