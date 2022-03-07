@@ -42,7 +42,7 @@ const auth = firebase.auth();
 
 logout.addEventListener("click", () => {
     auth.signOut().then(() => {
-        location.href = "Inicio.html";
+        location.href = "inicio.html";
     });
   });
 
