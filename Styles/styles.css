@@ -74,6 +74,11 @@ p,
     border: 10px solid #eeeeee;
 }
 
+.resaltado2{
+    color: #008fd4;
+    font-weight: bold;
+}
+
 .lista li{
     line-height: 1.5;
 }

@@ -12,10 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Hoja de vida</h1>
+    <header>
+        <h1>Hoja de vida</h1>
+        <button id="logout">Salir</button>
+    </header>
     <form id="form">
         <div class="divForm">
-            <fieldset>
+            <fieldset class="fieldset">
                 <legend>Datos personales</legend>
                 <div>
                     <label for="nombre">Nombres:</label>
@@ -41,7 +44,7 @@
                     <p class="hidden" id="errorFoto">Debes subir un archivo de tipo imagen</p>
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset">
                 <legend>Datos profesionales</legend>
                 <div class="profesionales" id="profesionales">
                     <label for="empresa">Empresa anterior:</label>
@@ -62,7 +65,7 @@
                 <p class="hidden" id="errorProfesionales">No hay ninguna empresa agregada</p>
                 <a href="javascript:datosProfesionales()" class="add">+</a>
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset">
                 <legend>Educación</legend>
                 <div>
                     <label for="formacionAcademica">Formación académica:</label>
@@ -90,10 +93,10 @@
                     </select>    
                 </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset">
                 <legend>Referencias</legend>
                 <div class="referencias" id="referencias">
-                    <label for="nombre1">Nombre Referencia 1:</label>
+                    <label for="nombre1">Nombre Referencia:</label>
                     <input autocomplete="off" type="text" id="nombre1" name="nombre1">
                     <p class="hidden" id="errorNombre1">El nombre deber tener entre 5 y 30 caracteres Alfabéticos</p>
                     <label for="telefono1">Teléfono:</label>
@@ -110,10 +113,13 @@
         <button class="hidden" id="submit" type="submit">Subir</button>
     </form>
     <button id="validar">Validar Datos</button>
+    <button id="getCV">Ver Hojas de Vida</button>
+    <div id="listCV"></div>
     <script src="ValidacionDatos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

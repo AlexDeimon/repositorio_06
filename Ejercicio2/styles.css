@@ -4,13 +4,18 @@ body{
 }
 
 h1{
+    margin-left: 3%;
     text-align: center;
     color: #008fd4;
 }
 
+h2{
+    margin-left: 3%;
+    margin-right: 3%;
+    color: #008fd4;
+}
+
 fieldset{
-    display: inline-block;
-    position: relative;
     background-color: #cccccc;
     font-size: large;
     box-shadow: 5px 5px 10px 2px #696969;
@@ -49,36 +54,45 @@ p{
     margin-bottom: 0;
 }
 
+article{
+    border: 1px solid #696969;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+header button{
+    margin: 20px 1%;
+}
+
 @media all and (max-width:340px){
-    fieldset{
+    .fieldset{
         min-width: 200px;
         max-width: 220px;
     }
 }
 
 @media all and (min-width:320px) and (max-width: 480px){
-    fieldset{
+    .fieldset{
         min-width: 320px;
         max-width: 320px;
     }
 }
 
 @media all and (min-width:480px){
-    fieldset{
+    .fieldset{
         min-width: 450px;
         max-width: 450px;
     }
 }
 
-fieldset div{
-    display: grid;
-    grid-template-columns: 45% 55%;
-    row-gap: 8px;
-}
-
-fieldset div p{
-    grid-column: 1/3;
-    margin: 0;
+.fieldset{
+    display: inline-block;
+    position: relative;
 }
 
 .divForm{
@@ -118,8 +132,18 @@ fieldset div p{
     border-radius: 10px;
 }
 
-#validar:hover,
-#submit:hover{
+button:hover{
     cursor: pointer;
     color: white;
+}
+
+.fieldset div{
+    display: grid;
+    grid-template-columns: 45% 55%;
+    row-gap: 8px;
+}
+
+.fieldset div p{
+    grid-column: 1/3;
+    margin: 0;
 }
